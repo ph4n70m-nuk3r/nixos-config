@@ -156,6 +156,8 @@
     mtr
     netcat
     wget
+    ## Privacy tools. ##
+    tor-browser-bundle-bin
     ## Rice. ##
     fastfetch
     ## VCS. ##
