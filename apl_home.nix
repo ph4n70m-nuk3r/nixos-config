@@ -12,7 +12,7 @@
     # Comment out the lines below or replace with your own information.
     userName = "ph4n70m-nuk3r";
     userEmail = "ph4n70m.nuk3r@gmail.com";
-    signing.key = "C188391624DAC951";
+    signing.key = "B2AA9B9B8AB2F171";
     signing.signByDefault = true;
   };
 

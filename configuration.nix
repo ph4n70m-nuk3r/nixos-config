@@ -163,6 +163,8 @@
     ## VCS. ##
     gh
     git
+    ## Image software. ##
+    gimp3
   ];
 
   # Configure command aliases (convenient shorthand) for BASH shell.
