@@ -116,6 +116,11 @@
     pinentryPackage = pkgs.pinentry-gnome3;
   };
 
+  # Install Steam.
+  programs.steam = {
+    enable = true;
+  };
+
   # Define packages which are installed system-wide (for all users).
   # To search, run: 'nix search wget', or visit https://search.nixos.org
   environment.systemPackages = with pkgs; [
