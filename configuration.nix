@@ -92,11 +92,16 @@
     setSocketVariable = true;
   };
 
-  # Allow unfree packages
+  # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
 
-  # Set nix pkg manager max download buffer size.
-  nix.settings.download-buffer-size = 524288000;
+  # Nix Settings.
+  nix.settings = {
+    # Set nix pkg manager max download buffer size.
+    download-buffer-size = 524288000;
+    # Enable some experimental features.
+    extra-experimental-features = [ "nix-command" "flakes" ];
+  };
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -174,10 +179,11 @@
 
   # Configure command aliases (convenient shorthand) for BASH shell.
   programs.bash.shellAliases = {
+    nixos_flake_update = "sudo nix  flake  update  --flake /etc/nixos/";
+    nixos_rebuild_boot = "sudo nixos-rebuild  boot  --flake /etc/nixos/";
+    nixos_rebuild_switch = "sudo nixos-rebuild  switch  --flake /etc/nixos/";
     e = "exit";
     ff = "fastfetch";
-    flake1 = "sudo nix  --extra-experimental-features nix-command  --extra-experimental-features flakes   flake  update  --flake /etc/nixos/";
-    flake2 = "sudo nixos-rebuild  switch  --flake /etc/nixos/";
     gadd = "git add";
     gcho = "git checkout";
     gcomm = "git commit -m";
@@ -198,10 +204,6 @@
     la = "ls -al";
     ll = "ls -l";
     ncu = "sudo nix-channel --update";
-    nrb = "sudo nixos-rebuild boot";
-    nrs = "sudo nixos-rebuild switch";
-    nrefresh = "sudo nix-channel --update  &&  sudo nixos-rebuild switch";
-    nupgrade = "sudo nix-channel --update  &&  sudo nixos-rebuild boot  &&  sudo reboot";
     tre = "tput reset";
     treee = "tree -I pkg --prune";
     trf = "tput reset  &&  fastfetch";
