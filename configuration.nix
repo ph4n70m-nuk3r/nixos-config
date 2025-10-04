@@ -138,11 +138,15 @@
     unzip
     xz
     zip
+    ## Containers. ##
+    dive
     ## Editors. ##
     # nano and gnome text editor are installed by default.
     vim
     ## Encoding. ##
     tinyxxd
+    ## Engines. ##
+    godot
     ## IDEs. ##
     jetbrains.idea-community-bin
     ## Script/Software Validation Tooling. ##

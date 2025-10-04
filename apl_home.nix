@@ -48,6 +48,18 @@
         show-on-edge = true;
         edge-reveal-width = 10;
       };
+
+      ## Custom keybinding for gnome terminal (kgx). ##
+      "org/gnome/settings-daemon/plugins/media-keys" = {
+        custom-keybindings = [
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        ];
+      };
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+        binding = "<Ctrl><Alt>t";
+        command = "kgx";
+        name = "open-terminal";
+      };
     };
   };
 
