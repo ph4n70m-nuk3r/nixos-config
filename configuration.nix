@@ -148,6 +148,7 @@
     ## Engines. ##
     godot
     ## IDEs. ##
+    jetbrains.clion
     jetbrains.idea-community-bin
     ## Script/Software Validation Tooling. ##
     shellcheck
