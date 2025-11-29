@@ -173,6 +173,7 @@
     wget
     ## Privacy tools. ##
     tor-browser-bundle-bin
+    protonvpn-gui
     ## Rice. ##
     fastfetch
     ## VCS. ##
@@ -180,6 +181,8 @@
     git
     ## Image software. ##
     gimp3
+    ## Gaming. ##
+    lutris
   ];
 
   # Configure command aliases (convenient shorthand) for BASH shell.
@@ -190,6 +193,7 @@
     e = "exit";
     ff = "fastfetch";
     gadd = "git add";
+    gbr = "git branch";
     gcho = "git checkout";
     gcomm = "git commit -m";
     gdiff = "git diff";
@@ -209,6 +213,7 @@
     la = "ls -al";
     ll = "ls -l";
     ncu = "sudo nix-channel --update";
+    tll = "tput reset && ls -l | tail -n +2";
     tre = "tput reset";
     treee = "tree -I pkg --prune";
     trf = "tput reset  &&  fastfetch";
