@@ -10,8 +10,10 @@
   programs.git = {
     enable = true;
     # Comment out the lines below or replace with your own information.
-    userName = "ph4n70m-nuk3r";
-    userEmail = "ph4n70m.nuk3r@gmail.com";
+    settings = {
+        user.name = "ph4n70m-nuk3r";
+        user.email = "ph4n70m.nuk3r@gmail.com";
+    };
     signing.key = "B2AA9B9B8AB2F171";
     signing.signByDefault = true;
   };

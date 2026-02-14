@@ -51,9 +51,9 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm.wayland = true;
+  services.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -103,6 +103,11 @@
     extra-experimental-features = [ "nix-command" "flakes" ];
   };
 
+  # Environment variables.
+  environment.variables = {
+    EDITOR = "vim";
+  };
+
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -149,7 +154,7 @@
     godot
     ## IDEs. ##
     jetbrains.clion
-    jetbrains.idea-community-bin
+    jetbrains.idea-oss
     ## Script/Software Validation Tooling. ##
     shellcheck
     ## PKCS. ##
@@ -172,7 +177,7 @@
     netcat
     wget
     ## Privacy tools. ##
-    tor-browser-bundle-bin
+    tor-browser
     protonvpn-gui
     ## Rice. ##
     fastfetch
@@ -183,6 +188,8 @@
     gimp3
     ## Gaming. ##
     lutris
+    ## Communication. ##
+    discord
   ];
 
   # Configure command aliases (convenient shorthand) for BASH shell.
