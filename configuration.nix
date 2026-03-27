@@ -145,7 +145,7 @@
     zip
     ## Containers. ##
     dive
-    ## Editors. ##
+    ## Text Editors. ##
     # nano and gnome text editor are installed by default.
     vim
     ## Encoding. ##
@@ -186,6 +186,8 @@
     git
     ## Image software. ##
     gimp3
+    ## Video Editors. ##
+    shotcut
     ## Gaming. ##
     lutris
     ## Communication. ##
