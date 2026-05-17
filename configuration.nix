@@ -23,6 +23,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [ 8080 ];
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -171,12 +172,12 @@
     ncurses
     parallel
     tree
-    ## Network tools. ##
+    ## Network Tools. ##
     curl
     mtr
     netcat
     wget
-    ## Privacy tools. ##
+    ## Privacy Tools. ##
     tor-browser
     protonvpn-gui
     ## Rice. ##
@@ -184,12 +185,14 @@
     ## VCS. ##
     gh
     git
-    ## Image software. ##
+    ## Image Software. ##
     gimp3
     ## Video Editors. ##
     shotcut
     ## Gaming. ##
     lutris
+    ## Translation Layer Utils. ##
+    protontricks
     ## Communication. ##
     discord
   ];
