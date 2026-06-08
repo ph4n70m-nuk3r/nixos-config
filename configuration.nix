@@ -23,6 +23,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [ 8080 ];
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -52,7 +53,6 @@
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
-  services.displayManager.gdm.wayland = true;
   services.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
@@ -171,25 +171,27 @@
     ncurses
     parallel
     tree
-    ## Network tools. ##
+    ## Network Tools. ##
     curl
     mtr
     netcat
     wget
-    ## Privacy tools. ##
+    ## Privacy Tools. ##
     tor-browser
-    protonvpn-gui
+    proton-vpn
     ## Rice. ##
     fastfetch
     ## VCS. ##
     gh
     git
-    ## Image software. ##
+    ## Image Software. ##
     gimp3
     ## Video Editors. ##
     shotcut
     ## Gaming. ##
-    lutris
+    #lutris
+    ## Translation Layer Utils. ##
+    protontricks
     ## Communication. ##
     discord
   ];
