@@ -53,7 +53,6 @@
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
-  services.displayManager.gdm.wayland = true;
   services.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
@@ -179,7 +178,7 @@
     wget
     ## Privacy Tools. ##
     tor-browser
-    protonvpn-gui
+    proton-vpn
     ## Rice. ##
     fastfetch
     ## VCS. ##
@@ -190,7 +189,7 @@
     ## Video Editors. ##
     shotcut
     ## Gaming. ##
-    lutris
+    #lutris
     ## Translation Layer Utils. ##
     protontricks
     ## Communication. ##
