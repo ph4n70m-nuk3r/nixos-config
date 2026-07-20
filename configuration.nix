@@ -129,6 +129,7 @@
   # Install Steam.
   programs.steam = {
     enable = true;
+    protontricks.enable = true;
   };
 
   # Define packages which are installed system-wide (for all users).
@@ -189,9 +190,10 @@
     ## Video Editors. ##
     shotcut
     ## Gaming. ##
-    #lutris
+    lutris
     ## Translation Layer Utils. ##
-    protontricks
+    #protontricks
+    #winetricks
     ## Communication. ##
     discord
   ];
