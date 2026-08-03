@@ -135,6 +135,8 @@
   # Define packages which are installed system-wide (for all users).
   # To search, run: 'nix search wget', or visit https://search.nixos.org
   environment.systemPackages = with pkgs; [
+    ## 3DCG. ##
+    blender
     ## Shell. ##
     bash
     ## Compression. ##
