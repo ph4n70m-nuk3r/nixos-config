@@ -96,11 +96,18 @@
   nixpkgs.config.allowUnfree = true;
 
   # Nix Settings.
-  nix.settings = {
-    # Set nix pkg manager max download buffer size.
-    download-buffer-size = 524288000;
-    # Enable some experimental features.
-    extra-experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 14d";
+    };
+    settings = {
+      # Set nix pkg manager max download buffer size.
+      download-buffer-size = 524288000;
+      # Enable some experimental features.
+      extra-experimental-features = [ "nix-command" "flakes" ];
+    };
   };
 
   # Environment variables.
@@ -157,7 +164,6 @@
     godot
     ## IDEs. ##
     jetbrains.clion
-    jetbrains.idea-oss
     ## Script/Software Validation Tooling. ##
     shellcheck
     ## PKCS. ##
@@ -205,6 +211,7 @@
     nixos_flake_update = "sudo nix  flake  update  --flake /etc/nixos/";
     nixos_rebuild_boot = "sudo nixos-rebuild  boot  --flake /etc/nixos/";
     nixos_rebuild_switch = "sudo nixos-rebuild  switch  --flake /etc/nixos/";
+    nixos_rebuild_test = "sudo nixos-rebuild  test  --flake /etc/nixos/";
     e = "exit";
     ff = "fastfetch";
     gadd = "git add";
