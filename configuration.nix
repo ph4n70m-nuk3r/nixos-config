@@ -133,10 +133,14 @@
     pinentryPackage = pkgs.pinentry-gnome3;
   };
 
-  # Install Steam.
+  # Install Steam and gamescope.
   programs.steam = {
     enable = true;
     protontricks.enable = true;
+  };
+
+  programs.gamescope = {
+    enable = true;
   };
 
   # Define packages which are installed system-wide (for all users).
